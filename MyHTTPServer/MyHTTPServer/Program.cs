@@ -1,51 +1,36 @@
 using MyHttpServer.Models;
 using MyHttpServer.Services;
-using System.Net;
-using System.Text;
+using System;
+using System.IO;
 using System.Text.Json;
 using System.Threading.Tasks;
-using MyHttpServer;
 
 namespace MyHttpServer
 {
-	internal class Program
-	{
-		// TODO: Необходимо проект АнимеГО или ЯндексЕда правильно разделить по файлам и по каталогам (js, css, images),
-		// после обновить папку public
-		// TODO: По просьбе Гайфуллина переверстать(переструктурировать) по принципу сайт БЭМ
+    internal class Program
+    {
+        static async Task Main(string[] args)
+        {
+            var mailService = new MailService();
+            await mailService.SendAsync();
 
-		// TODO: По URL отображать файл из папки public если он есть (включая вложенность)
-		// TODO: по умолчанию если не указан файл тогда искать файл index.html
-		// TODO: Если нет ни файла ни index.html отображать страницу с кодом 404 такой страницы нет
-		// TODO: В зависимости от типа файла подставлять соответствующий Content-Type (js, css, image)
+            AppConfig config = null;
+            if (File.Exists("config.json"))
+            {
+                var fileConfig = await File.ReadAllTextAsync("config.json");
+                config = JsonSerializer.Deserialize<AppConfig>(fileConfig);
+            }
+            else
+            {
+                Console.WriteLine("файл конфигурации сервера 'config.json' не найден");
+                config = new AppConfig();
+            }
 
+            var prefixes = new[] { $"http://{config.Domain}:{config.Port}/" };
+            string path = Path.Combine(Directory.GetCurrentDirectory(), config.StaticDirectoryPath);
+            var server = new HttpServer(prefixes, path);
 
-
-		static async Task Main(string[] args)
-		{
-			var mailService = new MailService();
-			mailService.SendAsync();
-
-			
-			AppConfig config = null;
-			if (File.Exists("config.json"))
-			{
-				var fileConfig = await File.ReadAllTextAsync("config.json");
-				config = JsonSerializer.Deserialize<AppConfig>(fileConfig);
-			}
-			else
-			{
-				Console.WriteLine("файл конфигурации сервера 'config.json' не найден");
-				config = new AppConfig();
-			}
-			var prefixes = new[] { $"http://{config.Domain}:{config.Port}/" };
-			string path = Directory.GetCurrentDirectory();
-			string sum = $"{path}\\{config.StaticDirectoryPath}";
-			var server = new HttpServer(prefixes, sum);
-
-			await server.StartAsync();
-			
-
-		}
-	}
+            await server.StartAsync();
+        }
+    }
 }

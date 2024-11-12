@@ -1,9 +1,9 @@
 namespace MyHttpServer.Models
 {
-    internal sealed class AppConfig
+    public class AppConfig
     {
         public string Domain { get; set; } = "localhost";
-        public uint Port { get; set; } = 6529;
-        public string StaticDirectoryPath { get; set; } = @"public\";
+        public int Port { get; set; } = 7574;
+        public string StaticDirectoryPath { get; set; } = "public";
     }
 }

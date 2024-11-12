@@ -22,10 +22,19 @@ namespace MyHttpServer
         public async Task StartAsync()
         {
             _listener.Start();
+            Console.WriteLine("Server is running...");
+
             while (_listener.IsListening)
             {
-                var context = await _listener.GetContextAsync();
-                await ProcessRequestAsync(context);
+                try
+                {
+                    var context = await _listener.GetContextAsync();
+                    _ = Task.Run(() => ProcessRequestAsync(context)); // Handle each request asynchronously
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
             }
         }
 
@@ -39,8 +48,23 @@ namespace MyHttpServer
                 filePath = Path.Combine(_staticDirectoryPath, "404.html");
                 context.Response.StatusCode = (int)HttpStatusCode.NotFound;
             }
+            else
+            {
+                context.Response.StatusCode = (int)HttpStatusCode.OK;
+            }
 
-            byte[] responseFile = await File.ReadAllBytesAsync(filePath);
+            byte[] responseFile;
+            try
+            {
+                responseFile = await File.ReadAllBytesAsync(filePath);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error reading file {filePath}: {ex.Message}");
+                context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                responseFile = Encoding.UTF8.GetBytes("500 - Internal Server Error");
+            }
+
             context.Response.ContentType = GetContentType(Path.GetExtension(filePath));
             context.Response.ContentLength64 = responseFile.Length;
             await context.Response.OutputStream.WriteAsync(responseFile, 0, responseFile.Length);

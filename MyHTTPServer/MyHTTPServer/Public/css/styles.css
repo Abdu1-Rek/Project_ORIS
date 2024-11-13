@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family: Helvetica, arial, sans-serif;
 }
 
 /*header---------------------------------------------------*/
@@ -129,7 +130,7 @@ body{
     height: 60px;
     justify-content: center;
     width: 300px;
-    background-color: #fff033;
+    background-color: #ffe24b;
     border-radius: 8px;
     border-width: 0;
     padding: 0;
@@ -169,7 +170,7 @@ body{
     border-radius: 16px;
     background-color: white;
     width: calc(900px - 64px)   ;
-    height: 521px;
+    height: 461px;
     grid-area: 1/2/2/3;
     margin-top: 38px;
     padding: 30px 32px;
@@ -191,13 +192,100 @@ body{
 }
 
 .dropbox-button{
+    display: flex;
     width: 100%;
     padding: 17px 32px 18px;
     font-size: 22px;
     background-color: #f4f4f4;
     border-width: 0;
-    border-radius: 8px;
+    border-radius: 16px;
+    justify-content: space-between;
 }
+.calc-slider{
+    font-size: 26px;
+    font-family: Helvetica, arial, sans-serif;
+
+}
+.slider{
+    appearance: none;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+}
+
+
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    background: black;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+
+}
+.days{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 15px 2px 0;
+    box-sizing: border-box;
+    background-color: #edeff1;
+    border-radius: 16px;
+    height: 60px;
+}
+.days2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px 10px;
+}
+.hours{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 15px 2px 0;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    background-color: #edeff1;
+    border-radius: 16px;
+    height: 60px;
+}
+.hours2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px 10px;
+}
+.summary{
+    flex-direction: column;
+
+    margin-top: 40px;
+}
+.sum{
+    display: flex;
+    justify-content: center;
+    background-color: #ffe24b;
+    width: 418px;
+    border-radius: 16px;
+    font-size: 26px;
+}
+.summ{
+    display: flex;
+    width: 100% ;
+    height: 70px;
+    justify-content: left;
+}
+.sum-text{
+    display: flex;
+    justify-self: center;
+    padding: 22px;
+}
+.sum-checkbox{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 40px;
+}
+
+
 /*advantages---------------------------------------------------*/
 .advantages{
     display: grid;
@@ -210,6 +298,8 @@ body{
     padding: 0 0 25px;
     grid-area: 1/2/2/4;
     border-radius: 15px;
+    font-size: 40px;
+    font-family: Helvetica, arial, sans-serif;
 }
 .advantage1{
     background-color: #edeff1;
@@ -219,6 +309,10 @@ body{
 .advantage2{
     background-color: #edeff1;
     background-image: url("../pictures/AdvantagesOfWork1.webp");
+    background-size: 40%;
+    background-position-y: bottom;
+    background-position-x: right;
+    background-repeat: no-repeat;
     grid-area: 2/3/3/4;
     border-radius: 15px;
 }
@@ -228,25 +322,41 @@ body{
     border-radius: 15px;
 }
 .advantage4{
+    background-color: #edeff1;
     background-image: url("../pictures/AdvantagesOfWork6.png");
-    background-size: 100%;
+    background-size: 90%;
+    background-position-y: center;
+    background-position-x: center;
     background-repeat: no-repeat;
     grid-area: 3/2/5/3;
     border-radius: 15px;
 }
 .advantage5{
     background-color: #edeff1;
+    background-image: url("../pictures/AdvantagesOfWork2.webp");
+    background-size: 90%;
+    background-position-x: right;
+    background-repeat: no-repeat;
     grid-area: 3/3/4/5;
     border-radius: 15px;
 }
 .advantage6{
     background-color: #edeff1;
-    background-position-y: 10px;
+    background-image: url("../pictures/AdvantagesOfWork4.webp");
+    background-size: 120%;
+    background-position-x: -85px;
+    background-position-y: center;
+    background-repeat: no-repeat;
     grid-area: 4/3/5/5;
     border-radius: 15px;
 }
 .advantage7{
     background-color: #edeff1;
+    background-image: url("../pictures/AdvantagesOfWork3.webp");
+    background-size: 85%;
+    background-position-x: right;
+    background-position-y: center;
+    background-repeat: no-repeat;
     grid-area: 5/2/6/4;
     border-radius: 15px;
 }
@@ -257,78 +367,256 @@ body{
 }
 .advantage9{
     background-color: #edeff1;
+    background-image: url("../pictures/AdvantagesOfWork5.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
     grid-area: 6/2/7/5;
     border-radius: 15px;
 }
 .advantage10{
     background-color: #edeff1;
+    background-image: url("../pictures/AdvantagesOfWork7.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
     grid-area: 7/2/8/5;
     border-radius: 15px;
 }
 
-/*HowBeCourier---------------------------------------------------*/
+.advantage-text-item1{
+    font-size: 26px;
+    font-family: Helvetica, arial, sans-serif;
+}
+.advantage-text-item2{
+    font-size: 13px;
+}
+
+/*AdvantagesOnTransport---------------------------------------------------*/
+.AdvantagesOnTransport{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: calc(50% - 460px) 590px 300px calc(50% - 460px);
+    grid-template-rows: min-content 330px;
+    padding: 30px 0;
+}
+
+.AOTImage{
+    grid-area:2/2/-1/-3;
+    background-image: url("../pictures/width_768x2_q70.webp");
+    background-size: 100%;
+    border-radius: 16px;
+}
+.AOTText{
+    grid-area:1/2/2/4;
+    padding-bottom: 25px;
+    font-size: 40px;
+    font-family: Helvetica, arial, sans-serif;
+}
+.AOTInfo{
+    padding: 14px;
+    display: grid;
+    gap: 0;
+    grid-template-columns: 30px calc(100% - 50px) 20px;
+    grid-template-rows: 20px min-content min-content 30px 30px min-content min-content 30px 30px min-content min-content 20px;
+    grid-area:2/3/-1/-2;
+    background-color: #edeff1;
+    border-radius: 16px;
+}
+
+.AOTInfoText1{
+    grid-area: 2/2;
+    font-size: 23px;
+    font-family: Helvetica, arial, sans-serif;
+}
+.AOTInfoText2{
+    grid-area: 3/2;
+    font-size: 13px;
+    font-family: Helvetica, arial, sans-serif;
+    padding-top: 10px;
+}
+.AOTInfoText3{
+    grid-area: 5/2;
+    font-size: 23px;
+    font-family: Helvetica, arial, sans-serif;
+}
+.AOTInfoText4{
+    grid-area: 7/2;
+    font-size: 13px;
+    font-family: Helvetica, arial, sans-serif;
+    padding-top: 10px;
+}
+.AOTInfoText5{
+    grid-area: 9/2;
+    font-size: 23px;
+    font-family: Helvetica, arial, sans-serif;
+}
+.AOTInfoText6{
+    grid-area: 11/2;
+    font-size: 13px;
+    font-family: Helvetica, arial, sans-serif;
+    padding-top: 10px;
+}
+/*buttonBeCourier1---------------------------------------------------*/
+.buttonBeCourier1{
+    display: grid;
+    grid-template-rows: 55px;
+    padding: 20px 0 35px;
+}
+.button1{
+    display: flex;
+    background-color: #ffe24b;
+    justify-self: center;
+    width: 270px;
+    border-radius: 8px;
+    justify-content: center;
+    padding: 16px 0;
+    font-size: 20px;
+}
+/*reviews---------------------------------------------------*/
+.reviews{
+    padding: 30px 0;
+    display: grid;
+    gap: 10px 15px;
+    grid-template-columns: calc(50% - 465px) 290px 290px 290px calc(50% - 465px);
+    grid-template-rows: 50px 450px;
+}
+.review-text{
+    grid-area: 1/2;
+    font-size: 40px ;
+
+}
+.review1{
+    grid-area: 2/2;
+    background-image: url("pictures/background.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    border-style: solid;
+    border-color: #c8c6c6;
+}
+.review2{
+    grid-area: 2/3;
+    background-image: url("pictures/background.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    border-style: solid;
+    border-color: #c8c6c6;
+}
+.review3{
+    grid-area: 2/4;
+    background-image: url("pictures/background.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    border-style: solid;
+    border-color: #c8c6c6;
+}
+.Abdzhapar1{
+    font-size: 26px;
+    padding: 20px 30px 0;
+}
+.Abdzhapar2{
+    font-size: 13px;
+    padding: 0 30px;
+}
+.Gvanca1{
+    font-size: 26px;
+    padding: 20px 30px 0;
+}
+.Gvanca2{
+    font-size: 13px;
+    padding: 0 30px;
+}
+.Denis1{
+    font-size: 26px;
+    padding: 20px 30px 0;
+}
+.Denis2{
+    font-size: 13px;
+    padding: 0 30px;
+}
+/*---------------------------------------------------*/
 .howBeCourier{
     display: grid;
     padding: 30px 0;
     gap: 10px;
-    grid-template-columns: calc(50% - 457px) 442px 442px calc(50% - 457px);
-    grid-template-rows: min-content 220px 220px;
-    /*background-color:rgba(46, 33, 33, 0.15);*/
+    grid-template-columns: calc(50% - 457px) 445px 445px calc(50% - 457px);
+    grid-template-rows: min-content 200px 200px;
 }
 .howBeCourier1{
     grid-area: 1/2/2/3;
-
+    font-size: 40px;
 }
 .howBeCourier2{
     grid-area: 2/2/3/3;
     background-image: url("../pictures/actions1.png");
-    background-size: 100%;
+    background-size: 110%;
     background-repeat: no-repeat;
-    border-radius: 15px;
+    border-radius: 16px;
     background-color: #ffe24b;
     background-position: center;
+    padding: 26px;
+    background-position-x: -50px;
 }
 .howBeCourier3{
     grid-area: 2/3/3/4;
     background-image: url("../pictures/actions2.png");
     background-size: 100%;
     background-repeat: no-repeat;
-    border-radius: 15px;
+    border-radius: 16px;
     background-color: #ffe24b;
     background-position: center;
+    padding: 26px;
 }
 .howBeCourier4{
     grid-area: 3/2/4/3;
     background-image: url("../pictures/actions3.webp");
     background-size: 100%;
     background-repeat: no-repeat;
-    border-radius: 15px;
+    border-radius: 16px;
     background-color: #ffe24b;
     background-position: center;
+    padding: 26px;
 }
 .howBeCourier5{
     grid-area: 3/3/4/4;
     background-image: url("../pictures/actions4.webp");
     background-size: 100%;
     background-repeat: no-repeat;
-    border-radius: 15px;
+    border-radius: 16px;
     background-color: #ffe24b;
     background-position: center;
+    padding: 26px;
 }
-/*ButtonBeCourier2---------------------------------------------------*/
-.buttonBeCourier2{
 
+/*---------------------------------------------------*/
+.buttonBeCourier2{
+    display: grid;
+    grid-template-rows: 55px;
+    padding: 20px 0 35px;
 }
-/*Cities---------------------------------------------------*/
+.button2{
+    display: flex;
+    background-color: #2b2b2b;
+    color: white;
+    justify-self: center;
+    width: 270px;
+    border-radius: 8px;
+    justify-content: center;
+    padding: 16px 0;
+    font-size: 20px;
+}
+/*---------------------------------------------------*/
 .cities{
     display: grid;
-    gap: 10px 0px;
+    gap: 10px 0;
     grid-template-columns: calc(50% - 450px) 900px calc(50% - 450px);
     grid-template-rows: 50px min-content;
-    background-color:rgba(46, 33, 33, 0.15);
+    padding: 30px 0;
 }
 .cities1{
     grid-area: 1/2/2/3;
+    font-size: 40px;
 }
 .cities2{
     grid-area: 2/2/3/3;
@@ -340,22 +628,48 @@ body{
     box-sizing: border-box;
     width: 100%;
     max-width: 954px;
-    margin: 0 auto;
-    padding: 0 17px;
-    justify-content: stretch;
-    margin: -15px;
     font-size: 20px;
-    background-color: white;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
 }
 .all-cities{
     background-color: #ffe24b;
-    border-radius: 20px;
+    border-radius: 16px;
+    height: 30px;
+    padding: 2px 10px 0;
+    margin: 15px;
 }
 .city{
-    border-bottom: #ffe24b;
+    width: 194px;
+    padding: 15px;
+}
+
+/*---------------------------------------------------*/
+.questions{
+    display: grid;
+    gap: 10px 0;
+    grid-template-columns: calc(50% - 450px) 250px 650px calc(50% - 450px);
+    grid-template-rows: min-content;
+    padding: 30px 0;
+}
+.questions2{
+    grid-area: 1/3;
+    font-size: 16px;
+}
+.question{
+    grid-area: 1/2;
+    font-size: 40px;
+}
+.question1{
+    display: flex;
+    font-size: 16px;
+    padding: 13px 0;
+    justify-content: space-between;
+}
+/*---------------------------------------------------*/
+.tags{
+    position: center;
 }
 
 
@@ -375,119 +689,11 @@ body{
 
 
 
-/*body{*/
-/*    margin: 0;*/
-/*}*/
-
-/*.container {*/
-/*    width: 100%;*/
-/*    max-width: 900px;*/
-/*    margin: 0 auto;*/
-/*}*/
-/*h1{*/
-/*    font-family: Helvetica, arial, sans-serif;*/
-/*    font-size: 55px;*/
-/*}*/
-/*.head{*/
-/*    position: sticky;*/
-/*    background-color: white;*/
-/*    top: 0;*/
-/*    width: 100%;*/
-/*    height: 65px;*/
-/*}*/
-/*.logo{*/
-/*    height: 60px;*/
-/*    width: 180px;*/
-/*    margin: 0 15px;*/
-/*}*/
-
-/*.driver{*/
-/*    display: grid;*/
-/*    grid-template-columns: calc(50% - 375px) 260px 260px 230px calc(50% - 375px);*/
-/*    grid-template-rows: 500px;*/
-/*    background-image: url("pictures/driver.png");*/
-/*    background-size: 100%;*/
-/*    background-repeat: no-repeat;*/
-/*}*/
-/*.driver-item1{*/
-/*    grid-area: 1 / 2 / -1 / -3;*/
-/*    display: grid;*/
-/*    grid-template-rows:calc(100% - 253) 124px 15px*/
-/*    54px 15px 60px calc(100% - 253);*/
-/*    color: white;*/
-/*    font-size: 15px;*/
-/*}*/
-
-/*.driver-text-1{*/
-/*    grid-area: 2*/
-/*}*/
-
-/*.driver-text-2{*/
-/*    grid-area: 4;*/
-/*}*/
-
-/*.buttonBeCourier{*/
-/*    grid-area: 6;*/
-/*}*/
-
-/*.calc{*/
-/*    row-gap: 38px;*/
-/*    display: grid;*/
-/*    grid-template-column: calc(50% - 375px) 1fr calc(50% - 375px);*/
-/*    grid-template-rows: 36px 574px;*/
-/*}*/
-
-/*.calc-item{*/
-/*    grid-area: 2 / 1 / -1 / -1;*/
-/*    background-image: url("pictures/background.png");*/
-/*    background-size: 100%;*/
-/*    background-repeat: no-repeat;*/
-/*    box-shadow: 0 2px 54px rgba(0, 0, 0, 0.15);*/
-/*    border-radius: 16px;*/
-/*    padding: 20px;*/
-/*}*/
 
 
-/*.dropbtn {*/
-/*    background-color: #f4f4f4;*/
-/*    color: black;*/
-/*    padding: 17px 32px 18px;*/
-/*    font-size: 16px;*/
-/*    border: none;*/
-/*    cursor: pointer;*/
-/*    border-radius: 16px;*/
-/*}*/
 
-/*!* Контейнер <div> - необходим для размещения выпадающего содержимого *!*/
-/*.dropdown {*/
-/*    position: relative;*/
-/*    display: inline-block;*/
 
-/*}*/
 
-/*!* Выпадающее содержимое (скрыто по умолчанию) *!*/
-/*.dropdown-content {*/
-/*    width: 100%;*/
-/*    display: none;*/
-/*    position: absolute;*/
-/*    background-color: white;*/
-/*    min-width: 160px;*/
-/*    box-shadow: 2px 1px 4px rgba(0,0,0,0.2);*/
-/*    z-index: 12;*/
-/*    margin: 10px 0 0;*/
-/*    padding:23px 0;*/
-/*}*/
 
-/*!* Ссылки внутри выпадающего списка *!*/
-/*.dropdown-content a {*/
-/*    color: black;*/
-/*    padding: 12px 16px;*/
-/*    text-decoration: none;*/
-/*    display: block;*/
-/*}*/
 
-/*!* Изменение цвета выпадающих ссылок при наведении курсора *!*/
-/*.dropdown-content a:hover {background-color: #ddd}*/
 
-/*!* Показать выпадающее меню (используйте JS, чтобы добавить этот класс .dropdown-content содержимого, когда пользователь нажимает на кнопку выпадающего списка) *!*/
-/*.show {display:block;}*/

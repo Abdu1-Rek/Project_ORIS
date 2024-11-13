@@ -9,9 +9,9 @@ namespace MyHttpServer.Services
 		public async Task SendAsync()
 		{
 			// отправитель - устанавливаем адрес и отображаемое в письме имя
-			MailAddress from = new MailAddress("somemail@gmail.com", "Tom");
+			MailAddress from = new MailAddress("almaznizamov0703@gmail.com", "Almaz");
 			// кому отправляем
-			MailAddress to = new MailAddress("somemail@yandex.ru");
+			MailAddress to = new MailAddress("nizam0v-almaz@yandex.ru");
 			// создаем объект сообщения
 			MailMessage m = new MailMessage(from, to);
 			// тема письма

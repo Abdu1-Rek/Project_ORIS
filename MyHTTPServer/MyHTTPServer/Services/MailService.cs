@@ -9,7 +9,7 @@ namespace MyHttpServer.Services
 		public async Task SendAsync()
 		{
 			// отправитель - устанавливаем адрес и отображаемое в письме имя
-			MailAddress from = new MailAddress("almaznizamov0703@gmail.com", "Almaz");
+			MailAddress from = new MailAddress("almaz-nizamov2004@mail.ru", "Almaz");
 			// кому отправляем
 			MailAddress to = new MailAddress("nizam0v-almaz@yandex.ru");
 			// создаем объект сообщения
@@ -21,9 +21,9 @@ namespace MyHttpServer.Services
 			// письмо представляет код html
 			m.IsBodyHtml = true;
 			// адрес smtp-сервера и порт, с которого будем отправлять письмо
-			SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+			SmtpClient smtp = new SmtpClient("smtp.mail.ru", 465);
 			// логин и пароль
-			smtp.Credentials = new NetworkCredential("somemail@gmail.com", "mypassword");
+			smtp.Credentials = new NetworkCredential("somemail@mail.ru", "mypassword");
 			smtp.EnableSsl = true;
 			smtp.Send(m);
 

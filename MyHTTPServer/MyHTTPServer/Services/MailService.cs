@@ -19,7 +19,7 @@ namespace MyHttpServer.Services
                m.Attachments.Add(attachment);
           }
           SmtpClient smtp = new SmtpClient("smtp.yandex.ru", 587);
-          smtp.Credentials = new NetworkCredential("nizam0v.almaz@yandex.ru", "hahaha");
+          smtp.Credentials = new NetworkCredential("nizam0v.almaz@yandex.ru", "111");
           smtp.EnableSsl = true;
           await smtp.SendMailAsync(m);
           Console.WriteLine("Письмо отправлено");

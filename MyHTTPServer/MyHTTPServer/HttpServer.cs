@@ -56,7 +56,7 @@ namespace MyHttpServer
 						filePath = Path.Combine(_staticDirectoryPath, "index.html");
 						break;
 					default:
-						filePath = Path.Combine(_staticDirectoryPath, "404error.html");
+						filePath = Path.Combine(_staticDirectoryPath, "404.html");
 						context.Response.StatusCode = (int)HttpStatusCode.NotFound;
 						break;
 				}

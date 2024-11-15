@@ -11,10 +11,10 @@ namespace MyHttpServer
     {
         static async Task Main(string[] args)
         {
-            var mailService = new MailService();
-            await mailService.SendAsync();
+            //var mailService = new MailService();
+            //await mailService.SendAsync();
 
-            AppConfig config = null;
+            AppConfig? config = null;
             if (File.Exists("config.json"))
             {
                 var fileConfig = await File.ReadAllTextAsync("config.json");

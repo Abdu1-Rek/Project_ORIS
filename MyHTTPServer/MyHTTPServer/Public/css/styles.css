@@ -669,9 +669,32 @@ body{
 }
 /*---------------------------------------------------*/
 .tags{
+    display: grid;
     position: center;
+    row-gap:0px;
+    column-gap:0px;
+    grid-template-columns:calc((100% - 0px - (915px)) * 0.5) 915px calc((100% - 0px - (915px)) * 0.5);
+    grid-template-rows:min-content;
+    padding-bottom: 27px;
 }
 
+.tags-border{
+    padding: 7px 10px;
+    background-color: #FEE334; 
+    border-radius: 999px; 
+    font-size: 14px; 
+    margin: 5px 4px; 
+    color: black; 
+    position: center;
+}
+.tags-flex{
+    grid-area: 1/2;
+    display: flex; 
+    flex-wrap : wrap; 
+    line-height: 1; 
+    left: 100px; 
+    width: calc(100%);             
+}
 
 
 

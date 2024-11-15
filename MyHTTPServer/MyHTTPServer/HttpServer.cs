@@ -44,7 +44,7 @@ namespace MyHttpServer
 
 		private async Task ProcessRequestAsync(HttpListenerContext context)
 		{
-			string relativePath = context.Request.Url?.AbsolutePath.TrimStart('/');
+			string relativePath = context.Request.Url.AbsolutePath.TrimStart('/');
 			string filePath = Path.Combine(_staticDirectoryPath, string.IsNullOrEmpty(relativePath) ? "index.html" : relativePath);
 
 			if (context.Request.HttpMethod == "POST")
@@ -91,12 +91,14 @@ namespace MyHttpServer
 			return extension.ToLower() switch
 			{
 				".html" => "text/html",
+				".svg" => "image/svg",
 				".css" => "text/css",
 				".js" => "application/javascript",
 				".jpg" => "image/jpeg",
 				".jpeg" => "image/jpeg",
 				".png" => "image/png",
 				".gif" => "image/gif",
+				".webp" => "image/webp",
 				_ => "application/octet-stream",
 			};
 		}

@@ -112,7 +112,7 @@ namespace MyHttpServer
 			};
 			return user;
 		}
-				private async Task SendMail(User user, HttpListenerContext context)
+		private async Task SendMail(User user, HttpListenerContext context)
 		{
 			MailService mailService = new MailService();
 			switch (context.Request.Url?.AbsolutePath.TrimStart('/'))

@@ -17,7 +17,7 @@ namespace MyHttpServer
 			_listener = new HttpListener();
 			foreach (var prefix in prefixes)
 			{
-				Console.WriteLine($"Server started on {prefix}");
+				Console.WriteLine($"Сервер начал работу на хосте {prefix}");
 				_listener.Prefixes.Add(prefix);
 			}
 
@@ -98,7 +98,7 @@ namespace MyHttpServer
 		public void Stop()
 		{
 			_listener.Stop();
-			Console.WriteLine("Server closed");
+			Console.WriteLine("Сервер умер");
 		}
 		
 		private async Task<User> GetPostData(HttpListenerRequest request)

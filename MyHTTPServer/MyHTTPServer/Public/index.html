@@ -55,20 +55,15 @@
         </div>
     </div>
     <div class="calculator">
+        <form action="" method="post">
         <div class="calc-dropbox">
             <div class="calc-dropbox-item1">
-                Ваш город:
-                <button class="dropbox-button">Москва<svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line y1="-0.5" x1="15" y2="-0.5" transform="matrix(0.707706 0.706507 -0.707706 0.706507 0.507935 7)" stroke="black"/>
-                    <line x1="13.2" y1="-0.5" x2="28.3083" y2="-0.5" transform="matrix(0.707706 -0.706507 0.707706 0.706507 1.93884 27)" stroke="black"/>
-                </svg></button>
+                Почта:
+                <input type="email" placeholder="Ваш Email" class="dropbox-button">
             </div>
             <div class="calc-dropbox-item2">
-                Способ передвижения:
-                <button class="dropbox-button">Авто<svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line y1="-0.5" x1="15" y2="-0.5" transform="matrix(0.707706 0.706507 -0.707706 0.706507 0.507935 7)" stroke="black"/>
-                    <line x1="13.2" y1="-0.5" x2="28.3083" y2="-0.5" transform="matrix(0.707706 -0.706507 0.707706 0.706507 1.93884 27)" stroke="black"/>
-                </svg></button>
+                Пароль:
+                <input type="password" placeholder="Ваш пароль" class="dropbox-button">
             </div>
         </div>
 
@@ -95,9 +90,11 @@
             <h2>Доход в месяц:</h2>
             <div class="summ">
                 <div class="sum">
+                    <button type="submit" class="sum">
                     <div class="sum-text">
                         103 000₽
                     </div>
+                </button>
                 </div>
                 <div class="sum-checkbox">
                     <div>
@@ -111,6 +108,7 @@
                 </div>
             </div>
         </div>
+        </form>
     </div>
 </div>
 <!------------------------------------------------------------->

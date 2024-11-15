@@ -44,9 +44,11 @@ namespace MyHttpServer
 
 		private async Task ProcessRequestAsync(HttpListenerContext context)
 		{
-			string relativePath = context.Request.Url.AbsolutePath.TrimStart('/');
+			string relativePath = context.Request.Url?.AbsolutePath.TrimStart('/');
 			string filePath = Path.Combine(_staticDirectoryPath, string.IsNullOrEmpty(relativePath) ? "index.html" : relativePath);
-
+			
+			Console.WriteLine(relativePath);
+			
 			if (context.Request.HttpMethod == "POST")
 			{
 				User user = await GetPostData(context.Request);

@@ -7,30 +7,27 @@ using System.Threading.Tasks;
 
 namespace MyHttpServer
 {
-    internal class Program
-    {
-        static async Task Main(string[] args)
-        {
-            //var mailService = new MailService();
-            //await mailService.SendAsync();
+	internal class Program
+	{
+		static async Task Main(string[] args)
+		{
+			AppConfig? config = null;
+			if (File.Exists("config.json"))
+			{
+				var fileConfig = await File.ReadAllTextAsync("config.json");
+				config = JsonSerializer.Deserialize<AppConfig>(fileConfig);
+			}
+			else
+			{
+				Console.WriteLine("файл конфигурации сервера 'config.json' не найден");
+				config = new AppConfig();
+			}
 
-            AppConfig? config = null;
-            if (File.Exists("config.json"))
-            {
-                var fileConfig = await File.ReadAllTextAsync("config.json");
-                config = JsonSerializer.Deserialize<AppConfig>(fileConfig);
-            }
-            else
-            {
-                Console.WriteLine("файл конфигурации сервера 'config.json' не найден");
-                config = new AppConfig();
-            }
+			var prefixes = new[] { $"http://{config.Domain}:{config.Port}/" };
+			string path = Path.Combine(Directory.GetCurrentDirectory(), config.StaticDirectoryPath);
+			var server = new HttpServer(prefixes, path);
 
-            var prefixes = new[] { $"http://{config.Domain}:{config.Port}/" };
-            string path = Path.Combine(Directory.GetCurrentDirectory(), config.StaticDirectoryPath);
-            var server = new HttpServer(prefixes, path);
-
-            await server.StartAsync();
-        }
-    }
+			await server.StartAsync();
+		}
+	}
 }

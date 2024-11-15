@@ -4,6 +4,9 @@ namespace MyHttpServer.Services
 {
     public interface IMailService
     {
-        Task SendAsync();
+        public static void SendAsync()
+        {
+        	
+        }
     }
 }

@@ -6,28 +6,23 @@ namespace MyHttpServer.Services
 {
 	internal class MailService : IMailService
 	{
-		public async Task SendAsync()
-		{
-			// отправитель - устанавливаем адрес и отображаемое в письме имя
-			MailAddress from = new MailAddress("almaz-nizamov2004@mail.ru", "Almaz");
-			// кому отправляем
-			MailAddress to = new MailAddress("nizam0v-almaz@yandex.ru");
-			// создаем объект сообщения
-			MailMessage m = new MailMessage(from, to);
-			// тема письма
-			m.Subject = "Тест";
-			// текст письма
-			m.Body = "<h2>Письмо-тест работы smtp-клиента</h2>";
-			// письмо представляет код html
-			m.IsBodyHtml = true;
-			// адрес smtp-сервера и порт, с которого будем отправлять письмо
-			SmtpClient smtp = new SmtpClient("smtp.mail.ru", 465);
-			// логин и пароль
-			smtp.Credentials = new NetworkCredential("somemail@mail.ru", "mypassword");
-			smtp.EnableSsl = true;
-			smtp.Send(m);
-
-			Console.Read();
-		}
+		public async void SendAsync(string emailTo, string body, string attachPath = null)
+     {
+          MailAddress from = new MailAddress("nizam0v.almaz@yandex.ru", "Almaz_Nizamov_yandex");
+          MailAddress to = new MailAddress(emailTo);
+          MailMessage m = new MailMessage(from, to);
+          m.Subject = "Яндекс";
+          m.Body = body;
+          if (attachPath != null)
+          {
+               Attachment attachment = new Attachment($"{attachPath}");
+               m.Attachments.Add(attachment);
+          }
+          SmtpClient smtp = new SmtpClient("smtp.yandex.ru", 587);
+          smtp.Credentials = new NetworkCredential("nizam0v.almaz@yandex.ru", "hahaha");
+          smtp.EnableSsl = true;
+          await smtp.SendMailAsync(m);
+          Console.WriteLine("Письмо отправлено");
+     }
 	}
 }

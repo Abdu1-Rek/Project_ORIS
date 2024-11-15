@@ -1,13 +1,13 @@
 ﻿using System.Net;
-using System.Text;
-using System.Text.Json;
+
 using System.Web;
+using MyHttpServer.Services;
 using MyHttpServer.Models;
 
 
 namespace MyHttpServer
 {
-	internal sealed class HttpServer
+	public sealed class HttpServer
 	{
 		private readonly HttpListener _listener;
 		private readonly string _staticDirectoryPath;
@@ -20,63 +20,49 @@ namespace MyHttpServer
 				Console.WriteLine($"Server started on {prefix}");
 				_listener.Prefixes.Add(prefix);
 			}
+
 			_staticDirectoryPath = staticDirectoryPath;
 		}
 
 		public async Task StartAsync()
 		{
 			_listener.Start();
-			Console.WriteLine("Server is running...");
-
 			while (_listener.IsListening)
 			{
-				try
+				var context = await _listener.GetContextAsync();
+				switch (context.Request.HttpMethod)
 				{
-					var context = await _listener.GetContextAsync();
-					_ = Task.Run(() => ProcessRequestAsync(context)); // Handle each request asynchronously
-				}
-				catch (Exception ex)
-				{
-					Console.WriteLine($"Error: {ex.Message}");
+					case "GET":
+						await ProcessRequestAsync(context);
+						break;
+					case "POST":
+						await SendMail(await GetPostData(context.Request), context);
+						break;
 				}
 			}
 		}
 
 		private async Task ProcessRequestAsync(HttpListenerContext context)
 		{
-			string relativePath = context.Request.Url?.AbsolutePath.TrimStart('/');
-			string filePath = Path.Combine(_staticDirectoryPath, string.IsNullOrEmpty(relativePath) ? "index.html" : relativePath);
+			string? relativePath = context.Request.Url?.AbsolutePath.TrimStart('/');
+			string filePath = Path.Combine(_staticDirectoryPath,
+				string.IsNullOrEmpty(relativePath) ? "index.html" : relativePath);
 			
-			Console.WriteLine(relativePath);
-			
-			if (context.Request.HttpMethod == "POST")
-			{
-				User user = await GetPostData(context.Request);
-				Console.WriteLine($"Получены данные: Name = {user.Login}, Password = {user.Password}");
-			}
-
 			if (!File.Exists(filePath))
 			{
-				filePath = Path.Combine(_staticDirectoryPath, "404.html");
-				context.Response.StatusCode = (int)HttpStatusCode.NotFound;
-			}
-			else
-			{
-				context.Response.StatusCode = (int)HttpStatusCode.OK;
-			}
+				switch (relativePath)
+				{
+					case "home-work" or "lol" or "requests" or "bu":
+						filePath = Path.Combine(_staticDirectoryPath, "index.html");
+						break;
+					default:
+						filePath = Path.Combine(_staticDirectoryPath, "404error.html");
+						context.Response.StatusCode = (int)HttpStatusCode.NotFound;
+						break;
+				}
+			}   
 
-			byte[] responseFile;
-			try
-			{
-				responseFile = await File.ReadAllBytesAsync(filePath);
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine($"Error reading file {filePath}: {ex.Message}");
-				context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-				responseFile = Encoding.UTF8.GetBytes("500 - Internal Server Error");
-			}
-
+			byte[] responseFile = await File.ReadAllBytesAsync(filePath);
 			context.Response.ContentType = GetContentType(Path.GetExtension(filePath));
 			context.Response.ContentLength64 = responseFile.Length;
 			await context.Response.OutputStream.WriteAsync(responseFile, 0, responseFile.Length);
@@ -87,23 +73,27 @@ namespace MyHttpServer
 		{
 			if (extension == null)
 			{
-				throw new ArgumentNullException(nameof(extension), "Extension cannot be null.");
+				throw new ArgumentNullException(nameof(extension), "null extenion.");
 			}
 
 			return extension.ToLower() switch
 			{
 				".html" => "text/html",
-				".svg" => "image/svg",
 				".css" => "text/css",
 				".js" => "application/javascript",
 				".jpg" => "image/jpeg",
 				".jpeg" => "image/jpeg",
+				".svg" => "image/svg+xml",
+				".ico" => "image/x-icon",
+				".bmp" => "image/bmp",
+				".webp" => "image/webp",
 				".png" => "image/png",
 				".gif" => "image/gif",
-				".webp" => "image/webp",
 				_ => "application/octet-stream",
 			};
 		}
+		
+		
 
 		public void Stop()
 		{
@@ -113,21 +103,36 @@ namespace MyHttpServer
 		
 		private async Task<User> GetPostData(HttpListenerRequest request)
 		{
-			// Чтение содержимого тела запроса
 			using var reader = new StreamReader(request.InputStream);
 			string body = await reader.ReadToEndAsync();
-
-			// Распарсим данные
 			var data = HttpUtility.ParseQueryString(body);
-
-			// Создаем и заполняем объект User
 			var user = new User
 			{
-			Login = data["Login"],
-			Password = data["Password"]
+				Login = data["Login"]
 			};
-
 			return user;
+		}
+				private async Task SendMail(User user, HttpListenerContext context)
+		{
+			MailService mailService = new MailService();
+			switch (context.Request.Url?.AbsolutePath.TrimStart('/'))
+			{
+				case "":
+					mailService.SendAsync(user.Login, $"Добро пожаловать в систему, Ваша почта: {user.Login}");
+					break;
+				case "lol":
+					mailService.SendAsync(user.Login,$"Ха-ха вы попались, вашу почту {user.Login} теперь знаю Я, Низамов Алмаз");
+					break;
+				case "requests":
+					mailService.SendAsync(user.Login, $"Вы подписались на рассылку ваша почта: {user.Login}");
+					break;
+				case "home-work":
+					mailService.SendAsync(user.Login, "Мое ДЗ от 1сНИКА", Path.Combine(_staticDirectoryPath, "MyHTTPServer.zip"));
+					break;
+				case "bu":
+					mailService.SendAsync(user.Login, $"Бу! Испугался? Не бойся, {user.Login} друг, я тебя не обижу. Иди сюда, иди ко мне, сядь рядом со мной, посмотри мне в глаза. Ты видишь меня? Я тоже тебя вижу. Давай смотреть друг на друга до тех пор, пока наши глаза не устанут. Ты не хочешь? Почему? Что-то не так?");
+					break;
+			}
 		}
 	}
 }

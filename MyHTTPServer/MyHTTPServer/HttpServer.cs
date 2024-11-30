@@ -44,6 +44,13 @@ namespace MyHttpServer
 
 		private async Task ProcessRequestAsync(HttpListenerContext context)
 		{
+			var StaticFilesHandler = new StaticFilesHandler();
+			var EndpointsHandler = new EndpointsHandler();
+
+			StaticFilesHandler.Successor = EndPointsHandler;
+
+			StaticFilesHandler.HandleRequest(context);
+			
 			string? relativePath = context.Request.Url?.AbsolutePath.TrimStart('/');
 			string filePath = Path.Combine(_staticDirectoryPath,
 				string.IsNullOrEmpty(relativePath) ? "index.html" : relativePath);
@@ -69,29 +76,7 @@ namespace MyHttpServer
 			context.Response.OutputStream.Close();
 		}
 
-		private string GetContentType(string? extension)
-		{
-			if (extension == null)
-			{
-				throw new ArgumentNullException(nameof(extension), "null extenion.");
-			}
-
-			return extension.ToLower() switch
-			{
-				".html" => "text/html",
-				".css" => "text/css",
-				".js" => "application/javascript",
-				".jpg" => "image/jpeg",
-				".jpeg" => "image/jpeg",
-				".svg" => "image/svg+xml",
-				".ico" => "image/x-icon",
-				".bmp" => "image/bmp",
-				".webp" => "image/webp",
-				".png" => "image/png",
-				".gif" => "image/gif",
-				_ => "application/octet-stream",
-			};
-		}
+		
 		
 		
 

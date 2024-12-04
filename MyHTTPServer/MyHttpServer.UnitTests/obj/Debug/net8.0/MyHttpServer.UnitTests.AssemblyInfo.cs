@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("MyHTTPServer")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("MyHttpServer.UnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0670be1ec95d41a4658bc9a79b3e223e894775c2")]
-[assembly: System.Reflection.AssemblyProductAttribute("MyHTTPServer")]
-[assembly: System.Reflection.AssemblyTitleAttribute("MyHTTPServer")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fbeb9bdec1d2628dfe7e703b08c4eb6115d8b2c")]
+[assembly: System.Reflection.AssemblyProductAttribute("MyHttpServer.UnitTests")]
+[assembly: System.Reflection.AssemblyTitleAttribute("MyHttpServer.UnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

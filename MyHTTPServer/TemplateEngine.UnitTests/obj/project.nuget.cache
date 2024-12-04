@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "BOz3GYFnNaQ8bFTJz2QQDGkgaB4smTXF69RV4rggVy3KYPefWgvMOUiHD9Dyt40TjvA0ppKBntpUpuxQNgSXDw==",
+  "success": true,
+  "projectFilePath": "/Users/almaz_nizamov/Downloads/MyHttpServer 3/TemplateEngine.UnitTests/TemplateEngine.UnitTests.csproj",
+  "expectedPackageFiles": [
+    "/Users/almaz_nizamov/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
+    "/Users/almaz_nizamov/.nuget/packages/microsoft.codecoverage/17.8.0/microsoft.codecoverage.17.8.0.nupkg.sha512",
+    "/Users/almaz_nizamov/.nuget/packages/microsoft.net.test.sdk/17.8.0/microsoft.net.test.sdk.17.8.0.nupkg.sha512",
+    "/Users/almaz_nizamov/.nuget/packages/microsoft.testplatform.objectmodel/17.8.0/microsoft.testplatform.objectmodel.17.8.0.nupkg.sha512",
+    "/Users/almaz_nizamov/.nuget/packages/microsoft.testplatform.testhost/17.8.0/microsoft.testplatform.testhost.17.8.0.nupkg.sha512",
+    "/Users/almaz_nizamov/.nuget/packages/mstest.testadapter/3.1.1/mstest.testadapter.3.1.1.nupkg.sha512",
+    "/Users/almaz_nizamov/.nuget/packages/mstest.testframework/3.1.1/mstest.testframework.3.1.1.nupkg.sha512",
+    "/Users/almaz_nizamov/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/almaz_nizamov/.nuget/packages/nuget.frameworks/6.5.0/nuget.frameworks.6.5.0.nupkg.sha512",
+    "/Users/almaz_nizamov/.nuget/packages/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

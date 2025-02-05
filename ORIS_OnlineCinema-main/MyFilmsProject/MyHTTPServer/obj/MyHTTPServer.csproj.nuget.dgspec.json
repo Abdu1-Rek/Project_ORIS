@@ -1,0 +1,242 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\MyHTTPServer\\MyHTTPServer.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\HttpServerLibrary\\HttpServerLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\HttpServerLibrary\\HttpServerLibrary.csproj",
+        "projectName": "HttpServerLibrary",
+        "projectPath": "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\HttpServerLibrary\\HttpServerLibrary.csproj",
+        "packagesPath": "C:\\Users\\almaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\HttpServerLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\almaz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\MyHTTPServer\\MyHTTPServer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\MyHTTPServer\\MyHTTPServer.csproj",
+        "projectName": "MyHTTPServer",
+        "projectPath": "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\MyHTTPServer\\MyHTTPServer.csproj",
+        "packagesPath": "C:\\Users\\almaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\MyHTTPServer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\almaz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\HttpServerLibrary\\HttpServerLibrary.csproj": {
+                "projectPath": "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\HttpServerLibrary\\HttpServerLibrary.csproj"
+              },
+              "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\MyORMLibrary\\MyORMLibrary.csproj": {
+                "projectPath": "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\MyORMLibrary\\MyORMLibrary.csproj"
+              },
+              "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\TemplateEngine\\TemplateEngine.csproj": {
+                "projectPath": "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\TemplateEngine\\TemplateEngine.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.0.0-preview3.24332.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\MyORMLibrary\\MyORMLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\MyORMLibrary\\MyORMLibrary.csproj",
+        "projectName": "MyORMLibrary",
+        "projectPath": "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\MyORMLibrary\\MyORMLibrary.csproj",
+        "packagesPath": "C:\\Users\\almaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\MyORMLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\almaz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.0.0-preview2.24304.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\TemplateEngine\\TemplateEngine.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\TemplateEngine\\TemplateEngine.csproj",
+        "projectName": "TemplateEngine",
+        "projectPath": "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\TemplateEngine\\TemplateEngine.csproj",
+        "packagesPath": "C:\\Users\\almaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\almaz\\OneDrive\\Рабочий стол\\ORIS_OnlineCinema-main\\MyFilmsProject\\TemplateEngine\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\almaz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

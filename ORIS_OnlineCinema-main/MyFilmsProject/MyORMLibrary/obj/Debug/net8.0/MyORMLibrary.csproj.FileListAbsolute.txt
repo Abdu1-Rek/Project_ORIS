@@ -1,0 +1,36 @@
+C:\Users\bulat-laptop\Downloads\MyHTTPServer\MyORMLibrary\bin\Debug\net8.0\MyORMLibrary.deps.json
+C:\Users\bulat-laptop\Downloads\MyHTTPServer\MyORMLibrary\bin\Debug\net8.0\MyORMLibrary.dll
+C:\Users\bulat-laptop\Downloads\MyHTTPServer\MyORMLibrary\bin\Debug\net8.0\MyORMLibrary.pdb
+C:\Users\bulat-laptop\Downloads\MyHTTPServer\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.csproj.AssemblyReference.cache
+C:\Users\bulat-laptop\Downloads\MyHTTPServer\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bulat-laptop\Downloads\MyHTTPServer\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.AssemblyInfoInputs.cache
+C:\Users\bulat-laptop\Downloads\MyHTTPServer\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.AssemblyInfo.cs
+C:\Users\bulat-laptop\Downloads\MyHTTPServer\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.csproj.CoreCompileInputs.cache
+C:\Users\bulat-laptop\Downloads\MyHTTPServer\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.dll
+C:\Users\bulat-laptop\Downloads\MyHTTPServer\MyORMLibrary\obj\Debug\net8.0\refint\MyORMLibrary.dll
+C:\Users\bulat-laptop\Downloads\MyHTTPServer\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.pdb
+C:\Users\bulat-laptop\Downloads\MyHTTPServer\MyORMLibrary\obj\Debug\net8.0\ref\MyORMLibrary.dll
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyORMLibrary\bin\Debug\net8.0\MyORMLibrary.deps.json
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyORMLibrary\bin\Debug\net8.0\MyORMLibrary.dll
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyORMLibrary\bin\Debug\net8.0\MyORMLibrary.pdb
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.csproj.AssemblyReference.cache
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.AssemblyInfoInputs.cache
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.AssemblyInfo.cs
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.csproj.CoreCompileInputs.cache
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.dll
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\refint\MyORMLibrary.dll
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.pdb
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\ref\MyORMLibrary.dll
+c:\Users\almaz\OneDrive\Рабочий стол\ORIS_OnlineCinema-main\MyFilmsProject\MyORMLibrary\bin\Debug\net8.0\MyORMLibrary.deps.json
+c:\Users\almaz\OneDrive\Рабочий стол\ORIS_OnlineCinema-main\MyFilmsProject\MyORMLibrary\bin\Debug\net8.0\MyORMLibrary.dll
+c:\Users\almaz\OneDrive\Рабочий стол\ORIS_OnlineCinema-main\MyFilmsProject\MyORMLibrary\bin\Debug\net8.0\MyORMLibrary.pdb
+c:\Users\almaz\OneDrive\Рабочий стол\ORIS_OnlineCinema-main\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.csproj.AssemblyReference.cache
+c:\Users\almaz\OneDrive\Рабочий стол\ORIS_OnlineCinema-main\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\almaz\OneDrive\Рабочий стол\ORIS_OnlineCinema-main\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.AssemblyInfoInputs.cache
+c:\Users\almaz\OneDrive\Рабочий стол\ORIS_OnlineCinema-main\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.AssemblyInfo.cs
+c:\Users\almaz\OneDrive\Рабочий стол\ORIS_OnlineCinema-main\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.csproj.CoreCompileInputs.cache
+c:\Users\almaz\OneDrive\Рабочий стол\ORIS_OnlineCinema-main\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.dll
+c:\Users\almaz\OneDrive\Рабочий стол\ORIS_OnlineCinema-main\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\refint\MyORMLibrary.dll
+c:\Users\almaz\OneDrive\Рабочий стол\ORIS_OnlineCinema-main\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\MyORMLibrary.pdb
+c:\Users\almaz\OneDrive\Рабочий стол\ORIS_OnlineCinema-main\MyFilmsProject\MyORMLibrary\obj\Debug\net8.0\ref\MyORMLibrary.dll

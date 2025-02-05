@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Административная панель</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .login-container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <form method="Post">
+        <h2>Регистрация</h2>
+        <div class="input-group">
+            <label for="login">Логин:</label>
+            <input type="email" id="login" name="user_email" placeholder="Введите логин" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="user_password" placeholder="Введите пароль" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Пароль:</label>
+            <input type="password" id="Пароль еще раз" name="user_confirm_password" placeholder="Введите пароль еще раз" required>
+        </div>
+        <div>
+        <button type="submit">Зарегаться</button>
+        </div>
+    </form>
+    <div>
+    <button><a href="login">Вход(НО ВАМ СЮДА НЕЛЬЗЯ)</a></button>
+    </div>    
+</div>
+</body>
+</html>
